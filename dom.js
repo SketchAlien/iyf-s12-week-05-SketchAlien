@@ -50,3 +50,39 @@ if (contentForHighlight) {
 }
 
 h1.classList.add("highlight");
+
+const contentsList = document.querySelectorAll(".content");
+if (contentsList[1]) {
+    contentsList[1].classList.toggle("accent");
+}
+
+const userInput = `img src="x" onerror="alert('hacked!')">;`
+document.getElementById("unsafe").innerHTML =userInput;
+document.getElementById("safe").textContent = userInput;
+
+//step 4
+function addNavItem(text, href) {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.className = "nav-link";
+    a.href = href;
+    a.textContent = text;
+    li.appendChild(li);
+}
+
+constnewPara = document.createElement("p");
+newPara.textContent = "Inserted befoe the article's first paragraph";
+articleEl.insertBefore(newPara, articleEl.querySelector("p"));
+
+const firstLi = navListItems.querySelector("li");
+const clonedLi = firstLi.cloneNode(true);
+clonedLi = firstLi.cloneNode(true);
+clonedLi.querySelector("a").textContent = "Cloned";
+navListItems.prepend(clonedLi);
+
+if (footerEl) {
+  footerEl.remove();
+}
+
+
+//step 
